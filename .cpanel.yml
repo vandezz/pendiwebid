@@ -1,13 +1,11 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/mxafnahk/public_html
-    - export APPPATH=/home/mxafnahk/pendiwebid
-    - /bin/mkdir -p $APPPATH
-    - /bin/cp -R app $APPPATH/
-    - /bin/cp -R system $APPPATH/
-    - /bin/cp composer.json $APPPATH/
-    - /bin/cp composer.lock $APPPATH/
-    - /bin/mkdir -p $APPPATH/writable/cache $APPPATH/writable/logs $APPPATH/writable/session $APPPATH/writable/uploads $APPPATH/writable/debugbar
-    - /bin/cp -R public/. $DEPLOYPATH/
-    - cd $APPPATH && php /usr/local/bin/composer install --no-dev --optimize-autoloader
+    - /bin/mkdir -p /home/mxafnahk/pendiwebid
+    - /bin/cp -R app /home/mxafnahk/pendiwebid/
+    - /bin/cp -R system /home/mxafnahk/pendiwebid/
+    - /bin/cp composer.json /home/mxafnahk/pendiwebid/
+    - /bin/cp composer.lock /home/mxafnahk/pendiwebid/
+    - /bin/mkdir -p /home/mxafnahk/pendiwebid/writable/cache /home/mxafnahk/pendiwebid/writable/logs /home/mxafnahk/pendiwebid/writable/session /home/mxafnahk/pendiwebid/writable/uploads /home/mxafnahk/pendiwebid/writable/debugbar
+    - /bin/cp -R public/. /home/mxafnahk/public_html/
+    - cd /home/mxafnahk/pendiwebid && php /usr/local/bin/composer install --no-dev --optimize-autoloader
