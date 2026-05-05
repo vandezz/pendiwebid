@@ -8,4 +8,3 @@ deployment:
     - /bin/cp composer.lock /home/mxafnahk/pendiwebid/
     - /bin/mkdir -p /home/mxafnahk/pendiwebid/writable/cache /home/mxafnahk/pendiwebid/writable/logs /home/mxafnahk/pendiwebid/writable/session /home/mxafnahk/pendiwebid/writable/uploads /home/mxafnahk/pendiwebid/writable/debugbar
     - /bin/cp -R public/. /home/mxafnahk/public_html/
-    - cd /home/mxafnahk/pendiwebid && php /usr/local/bin/composer install --no-dev --optimize-autoloader

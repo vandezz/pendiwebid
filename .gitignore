@@ -84,7 +84,8 @@ phpunit
 #-------------------------
 # Composer
 #-------------------------
-vendor/
+# vendor/ is included for shared hosting deployment (no SSH/composer access)
+# vendor/
 
 #-------------------------
 # IDE / Development Files
