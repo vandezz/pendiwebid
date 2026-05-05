@@ -1,0 +1,13 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/mxafnahk/public_html
+    - export APPPATH=/home/mxafnahk/pendiwebid
+    - /bin/mkdir -p $APPPATH
+    - /bin/cp -R app $APPPATH/
+    - /bin/cp -R system $APPPATH/
+    - /bin/cp composer.json $APPPATH/
+    - /bin/cp composer.lock $APPPATH/
+    - /bin/mkdir -p $APPPATH/writable/cache $APPPATH/writable/logs $APPPATH/writable/session $APPPATH/writable/uploads $APPPATH/writable/debugbar
+    - /bin/cp -R public/. $DEPLOYPATH/
+    - cd $APPPATH && php /usr/local/bin/composer install --no-dev --optimize-autoloader
